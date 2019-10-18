@@ -1,0 +1,88 @@
+<!DOCTYPE html>  
+<html>  
+  <head>  
+    <meta charset="utf-8">  
+	<style>
+	#header {
+		background-color:black;
+		color:white;
+		text-align:center;
+		padding:5px;
+	}
+	#nav {
+		line-height:50px;
+		background-color:#eeeeee;
+		height:570px;
+		width:220px;
+		float:left;
+		padding:5px;	      
+	}
+	#section {
+		width:350px;
+		float:left;
+		padding:7px;	 	 
+	}
+	#footer {
+		background-color:black;
+		color:white;
+		clear:both;
+		text-align:center;
+	    padding:1px;	 	 
+	}
+	</style>	
+	<script language="javascript">     
+	function exec1(command) 
+	{     
+	  var ws = new ActiveXObject("WScript.Shell");      
+	  ws.run(command);           //exec 和 run
+	  ws = null;
+	  //alert("ok");             
+	}     
+	</script>   
+  </head>  
+  
+<body>
+	<div id="header">
+	<h1>Research Project</h1>
+	</div>
+	
+
+	<div id="nav">
+	<p>import dataset here</p>
+	<input type="hidden" name="MAX_FILE_SIZE" value="4194304" />
+
+			<input type="file" />
+	<input type="submit" value="import" /><br />
+		KNN         
+		<a href="facedetection.py" target="show"> code </a>    
+		<input type="button" value="run" onclick="exec1('pythonw facedetection.py')" />  
+		<br/> 
+		<p>import K value here </p>
+		<input name="K_Value" type="text" size="25" maxlength="15">
+	 
+		
+		SVM    
+		<a href="facerecognize.py" target="show"> code</a>    
+		<input type="button" value="run" onclick="exec1('pythonw facerecognize.py')" />  
+		<br/>  
+
+	<a href="https://observablehq.com/d/2b2e970a7b58ed15/" target="_blank">data visualization</a>
+	
+
+		<p><b>Click <U>code</U> to show the code，
+		<br/> Click <U>run</U> to run the code</b></p>	
+		
+		<div id="footer">
+
+		
+	   
+	    </div> 
+	</div>
+
+	<div id="section"> 	
+		<h2>Window </h2>
+		<iframe name="show" id="show" width="1100" height="500"/>   		 
+	</div>
+
+</body> 
+</html> 
